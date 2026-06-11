@@ -1,0 +1,29 @@
+# Data - never commit raw data
+data/
+
+# Outputs - never commit models or predictions
+outputs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environments
+.env
+venv/
+.venv/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+#virtual env
+venv/
