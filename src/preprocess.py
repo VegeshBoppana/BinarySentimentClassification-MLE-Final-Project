@@ -11,9 +11,7 @@ nltk.download('wordnet', quiet=True)
 nltk.download('omw-1.4', quiet=True)
 
 stop_words = set(stopwords.words('english'))
-custom_stopwords = stop_words.union({
-    'film', 'movie', 'movies', 'films', 'one', 'br'
-})
+custom_stopwords = stop_words.union({'film', 'movie', 'movies', 'films', 'one', 'br'})
 
 lemmatizer = WordNetLemmatizer()
 
@@ -33,7 +31,7 @@ def preprocess_text(text):
     return ' '.join(tokens)
 
 def preprocess_dataframe(df, text_column='review'):
-    print(f"Preprocessing {len(df)} reviews...")
+    print(f"Preprocessing {len(df)} reviews")
     df['cleaned_review'] = df[text_column].apply(preprocess_text)
     print("Preprocessing complete!")
     return df

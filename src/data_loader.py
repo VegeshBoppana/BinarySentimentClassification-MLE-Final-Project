@@ -10,7 +10,7 @@ def download_and_extract(url, save_dir):
     os.makedirs(save_dir, exist_ok=True)
     zip_path = os.path.join(save_dir, "data.zip")
 
-    print(f"Downloading from {url}...")
+    print(f"Downloading from {url}")
     response = requests.get(url, stream=True)
     response.raise_for_status()
 
@@ -18,7 +18,7 @@ def download_and_extract(url, save_dir):
         for chunk in response.iter_content(chunk_size=8192):
             f.write(chunk)
 
-    print("Extracting...")
+    print("Extracting The Files")
     with zipfile.ZipFile(zip_path, "r") as z:
         z.extractall(save_dir)
     os.remove(zip_path)
