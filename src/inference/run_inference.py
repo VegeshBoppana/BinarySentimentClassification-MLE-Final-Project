@@ -10,7 +10,7 @@ from preprocess import preprocess_dataframe
 from evaluate import evaluate_model, save_metrics, save_confusion_matrix
 
 
-INFERENCE_DATA_PATH = 'data/raw/final_project_inference_dataset/final_project_inference_dataset/inference.csv'
+INFERENCE_DATA_PATH = 'data/raw/inference.csv'
 MODEL_PATH = 'outputs/models/model.pkl'
 VECTORIZER_PATH = 'outputs/models/vectorizer.pkl'
 PREDICTIONS_PATH = 'outputs/predictions/inference_predictions.csv'
