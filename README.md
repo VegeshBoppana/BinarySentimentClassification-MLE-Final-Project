@@ -113,6 +113,7 @@ cd BinarySentimentClassification-MLE-Final-Project
 
 #### Step 2 — Training
 ```bash
+#Build Image from Docker Training File
 docker build -t sentiment-train -f src/train/Dockerfile .
 
 # Linux/Mac
@@ -124,6 +125,7 @@ docker run -v ${PWD}/outputs:/app/outputs sentiment-train
 
 #### Step 3 — Inference
 ```bash
+#Build Image from Docker Inference File
 docker build -t sentiment-inference -f src/inference/Dockerfile .
 
 # Linux/Mac
