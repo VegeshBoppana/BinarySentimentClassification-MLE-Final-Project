@@ -67,7 +67,7 @@ Binary sentiment classification on IMDB movie reviews using NLP and Machine Lear
 | Naive Bayes | TF-IDF Stem | 0.8565 |
 | LinearSVC | TF-IDF Stem | 0.8875 |
 
-#### Bonus — Dense Vectorization
+#### Dense Vectorization
 | Model | Vectorizer | Accuracy |
 |-------|-----------|----------|
 | LinearSVC | GloVe (avg pooling) | 0.7929 |
@@ -78,7 +78,6 @@ Binary sentiment classification on IMDB movie reviews using NLP and Machine Lear
 - LinearSVC handles high dimensional sparse matrices excellently
 - TF-IDF Bigram captures both individual words and sentiment phrases
 - Fast training and inference
-- No probability calibration needed
 
 ### Performance Evaluation
 | Metric | Negative | Positive |
@@ -89,14 +88,12 @@ Binary sentiment classification on IMDB movie reviews using NLP and Machine Lear
 | **Accuracy** | | **0.9031** |
 
 ### Potential Business Applications
-- **Review Moderation** — automatically flag negative reviews for follow-up
-- **Customer Feedback Analysis** — analyze thousands of reviews instantly
-- **Brand Monitoring** — track sentiment of product/service reviews in real time
-- **Recommendation Systems** — use sentiment scores to improve recommendations
+- **Customer Experience (CX)** — Companies use sentiment analysis on support tickets, live chats, and survey responses to identify    unhappy customers, prioritize urgent complaints, and reduce churn.
+- **Financial Forecasting** — Traders and hedge funds analyze financial news and social chatter (e.g., on stock market forums) to gauge market emotions, anticipate price fluctuations, and make informed investment decisions.
 - **Market Research** — understand customer sentiment trends over time
 
 ### Note on Dense Embeddings
-Word2Vec and GloVe embeddings were explored as a bonus. Average pooling over 
+Word2Vec and GloVe embeddings were explored. Average pooling over 
 word vectors resulted in lower accuracy (0.79) compared to TF-IDF (0.90) because:
 - Long reviews dilute strong sentiment words during averaging
 - TF-IDF rewards rare but discriminative words like "masterpiece" or "unwatchable"
