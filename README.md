@@ -100,3 +100,34 @@ word vectors resulted in lower accuracy (0.79) compared to TF-IDF (0.90) because
 - BERT-based models would likely outperform TF-IDF but require GPU resources
 
 ---
+
+## MLE Part
+
+### Quickstart
+
+#### Step 1 — Clone the Repository
+```bash
+git clone https://github.com/VegeshBoppana/BinarySentimentClassification-MLE-Final-Project.git
+cd BinarySentimentClassification-MLE-Final-Project
+```
+
+#### Step 2 — Training
+```bash
+docker build -t sentiment-train -f src/train/Dockerfile .
+
+# Linux/Mac
+docker run -v $(pwd)/outputs:/app/outputs sentiment-train
+
+# Windows PowerShell
+docker run -v ${PWD}/outputs:/app/outputs sentiment-train
+```
+
+#### Step 3 — Inference
+```bash
+docker build -t sentiment-inference -f src/inference/Dockerfile .
+
+# Linux/Mac
+docker run -v $(pwd)/outputs:/app/outputs sentiment-inference
+
+# Windows PowerShell
+docker run -v ${PWD}/outputs:/app/outputs sentiment-inference
